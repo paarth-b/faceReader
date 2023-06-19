@@ -19,7 +19,7 @@ while True:
     )
 
     for x, y, width, height in faces:
-        cv2.rectangle(frame, (x, y), (x + width, y + height), (255, 255, 0), 2)
+        cv2.rectangle(frame, (x, y, x + width, y + height), (255, 255, 0), 2)
 
     cv2.imshow("Faces", frame)
 

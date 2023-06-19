@@ -41,7 +41,7 @@ training_generator = training_datagen.flow_from_directory(
     target_size=(img_rows, img_cols),
     batch_size=batch_size,
     class_mode="categorical",
-    shuffle="true",
+    shuffle= True,
 )
 
 validation_generator = validation_datagen.flow_from_directory(
@@ -50,7 +50,7 @@ validation_generator = validation_datagen.flow_from_directory(
     target_size=(img_rows, img_cols),
     batch_size=batch_size,
     class_mode="categorical",
-    shuffle="true",
+    shuffle= True,
 )
 
 # Model Creation
