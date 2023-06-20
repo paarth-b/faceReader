@@ -1,22 +1,14 @@
-@article{Mollahosseini_2019,
-	doi = {10.1109/taffc.2017.2740923},
-  
-	url = {https://doi.org/10.1109%2Ftaffc.2017.2740923},
-  
-	year = 2019,
-	month = {jan},
-  
-	publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
-  
-	volume = {10},
-  
-	number = {1},
-  
-	pages = {18--31},
-  
-	author = {Ali Mollahosseini and Behzad Hasani and Mohammad H. Mahoor},
-  
-	title = {{AffectNet}: A Database for Facial Expression, Valence, and Arousal Computing in the Wild},
-  
-	journal = {{IEEE} Transactions on Affective Computing}
+@article{DBLP:journals/corr/abs-2105-03588,
+  author       = {Yousif Khaireddin and
+                  Zhuofa Chen},
+  title        = {Facial Emotion Recognition: State of the Art Performance on {FER2013}},
+  journal      = {CoRR},
+  volume       = {abs/2105.03588},
+  year         = {2021},
+  url          = {https://arxiv.org/abs/2105.03588},
+  eprinttype    = {arXiv},
+  eprint       = {2105.03588},
+  timestamp    = {Fri, 14 May 2021 12:13:30 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2105-03588.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }

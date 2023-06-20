@@ -13,7 +13,7 @@ import os
 
 # variable_definition
 num_classes = 6
-img_rows, img_cols = 128, 128
+img_rows, img_cols = 48, 48
 batch_size = 32
 
 # dataset variables
