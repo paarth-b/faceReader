@@ -1,3 +1,5 @@
+import keras
+from keras.models import Model
 from keras.models import load_model
 from keras.preprocessing import image
 from keras.utils import img_to_array
@@ -9,7 +11,7 @@ clf = cv2.CascadeClassifier(
     cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
 )
 
-model_classifier = load_model('/ExpressionModel.h5')
+model_classifier = load_model("ExpressionModel.keras")
 emotion_labels = ['Happy','Angry','Sad','Neutral','Surprise','Fear']
 camera = cv2.VideoCapture(0)
 
@@ -33,7 +35,8 @@ while True:
             roi=roi_gray.astype('float')/255.0
             roi=img_to_array(roi)
             roi=np.expand_dims(roi,axis=0)
-            preds=clf.predict(roi)[0]
+            
+            preds = model_classifier.predict((roi))[0]
             label=emotion_labels[preds.argmax()]
             label_position=(x,y)
             cv2.putText(frame,label,label_position,cv2.FONT_HERSHEY_SIMPLEX,2,(0,255,0),3)

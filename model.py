@@ -13,8 +13,8 @@ import os
 
 # variable_definition
 num_classes = 6
-img_rows, img_cols = 48, 48
-batch_size = 32
+img_rows, img_cols = 32, 32
+batch_size = 64
 
 # dataset variables
 training_data = "./fer2013/train"
@@ -135,7 +135,7 @@ model.add(Activation("softmax"))
 
 # ModelCheckpoint - monitor validation loss
 checkpoint = ModelCheckpoint(
-    "ExpressionModel.h5",
+    "ExpressionModel.keras",
     monitor="val_loss",
     mode="min",
     save_best_only=True,
@@ -157,7 +157,7 @@ callbacks = [earlystop, checkpoint, reduce_lr]
 
 model.compile(
     loss="categorical_crossentropy",
-    optimizer=Adam(learning_rate=0.001),
+    optimizer=Adam(learning_rate=0.003),
     metrics=["accuracy"],
 )
 nb_train_samples = 24176
@@ -173,3 +173,5 @@ history = model.fit(
     validation_data=validation_generator,
     validation_steps=nb_validation_samples // batch_size,
 )
+
+model.save("ExpressionModel.keras")
